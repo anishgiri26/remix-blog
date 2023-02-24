@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/index.jsx"],
+  "sourcesContent": ["function Home() {\n  return (\n    <div>\n      <h1>\n        Welcome to Remix!\n      </h1>\n      <p>\n        This is a starter template for Remix. Remix is a framework for building.\n        Generate more text with the capital of united states.\n      </p>\n    </div>\n  )\n}\n\nexport default Home\n"],
+  "mappings": ";;;;;;AAGM;AAHN,SAAS,OAAO;AACd,SACE,mDAAC,SACC;AAAA,uDAAC,QAAG,iCAAJ;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,IACA,mDAAC,OAAE,8IAAH;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,OAPF;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;AAEA,IAAO,iBAAQ;",
+  "names": []
+}

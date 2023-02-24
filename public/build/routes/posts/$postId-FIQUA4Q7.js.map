@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/posts/$postId.jsx"],
+  "sourcesContent": ["import { useLoaderData, Link } from \"@remix-run/react\";\nimport { db } from \"~/utils/db.server\";\n\nexport const loader = async ({ params }) => {\n  const post = await db.post.findUnique({\n    where: { id: params.postId },\n  });\n\n  if (!post) throw new Error(\"Post not found\");\n\n  const data = { post }\n  return data;\n}\n\nfunction Post() {\n    const {post} = useLoaderData()\n\n  return (\n    <>\n      <div className=\"page-header\">\n        <h1>{post.title}</h1>\n        <Link to='/posts' className=\"btn btn-reverse\">Back</Link>\n      </div>\n      <div className=\"page-content\"> {post.body} </div>\n    </>\n  )\n}\n\nexport default Post\n"],
+  "mappings": ";;;;;;;;;;;;;AACA,gBAAmB;AAiBf;AAJJ,SAAS,OAAO;AACZ,QAAM,EAAC,KAAI,IAAI,cAAc;AAE/B,SACE,sFACE;AAAA,uDAAC,SAAI,WAAU,eACb;AAAA,yDAAC,QAAI,eAAK,SAAV;AAAA;AAAA;AAAA;AAAA,aAAgB;AAAA,MAChB,mDAAC,QAAK,IAAG,UAAS,WAAU,mBAAkB,oBAA9C;AAAA;AAAA;AAAA;AAAA,aAAkD;AAAA,SAFpD;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,IACA,mDAAC,SAAI,WAAU,gBAAe;AAAA;AAAA,MAAE,KAAK;AAAA,MAAK;AAAA,SAA1C;AAAA;AAAA;AAAA;AAAA,WAA2C;AAAA,OAL7C;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;AAEA,IAAO,iBAAQ;",
+  "names": []
+}
